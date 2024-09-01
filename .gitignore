@@ -1,6 +1,7 @@
 # ignore list - full tutorial at github.com/github/gitignore
 # try git rm --cached <file>. This will remove the file from remote, while --cached will retain it locally
 
-*.exe
+Module 1/CH02Exercise13.exe
+Module 1/.vscode
 
 
