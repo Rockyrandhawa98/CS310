@@ -1,6 +1,6 @@
 # ignore list - full tutorial at github.com/github/gitignore
 
-*.xlsx
+*.vscode
 *.exe
 
 
