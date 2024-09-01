@@ -1,6 +1,6 @@
 # ignore list - full tutorial at github.com/github/gitignore
 
-*.vscode
+/Module 1/.vscode
 *.exe
 
 
