@@ -27,7 +27,7 @@ int main() {
     cout << fixed << setprecision(2);
     locale loc("");
     cout.imbue(loc);
-    cout << interest;
+    cout << "The interest is: " << interest;
     
     return 0;
 }
