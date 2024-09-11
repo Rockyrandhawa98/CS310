@@ -14,15 +14,16 @@ int main () {
     cout << "How many books do you think will be sold? ";
     cin >> books_sold;
 
-    int remaining_books = 0;
+    
+    float choice1 = 25000.00;
+    float choice2 = choice2_rate * price_per_novel * books_sold;
 
+    int remaining_books = 0;
     if (books_sold > 4000) {
         remaining_books = books_sold - 4000;
         books_sold = 4000;
     }
-
-    float choice1 = 25000.00;
-    float choice2 = choice2_rate * price_per_novel * books_sold;
+    
     float choice3 = (choice3_rate_first_4000 * price_per_novel * books_sold) + (choice3_rate * price_per_novel * remaining_books);
 
     cout << " " << endl;
@@ -66,4 +67,5 @@ int main () {
     getch();
 
     return 0;
+
 }
