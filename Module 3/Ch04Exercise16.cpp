@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 int main () {
@@ -39,26 +40,30 @@ int main () {
     cout << "Based on these results, your best choice is " ;
 
     if (choice1 > choice2 && choice1 > choice3) {
-        cout << "option 1, where you will make $" << choice1 << ".";
+        cout << "option 1, where you will make $" << choice1 << "." << endl;
     }
     else if (choice2 > choice1 && choice2 > choice3) {
-        cout << "option 2, where you will make $" << choice2 << ".";
+        cout << "option 2, where you will make $" << choice2 << "." << endl;
     }
     else if (choice3 > choice2 && choice3 > choice1) {
-        cout << "option 3, where you will make $" << choice3 << ".";
+        cout << "option 3, where you will make $" << choice3 << "." << endl;
     }
     else if (choice1 == choice2) {
-        cout << "either option 1 or option 2, since they both result in net royalties of $" << choice1 << ".";
+        cout << "either option 1 or option 2, since they both result in net royalties of $" << choice1 << "." << endl;
     }
     else if (choice1 == choice3) {
-        cout << "either option 1 or option 3, since they both result in net royalties of $" << choice1 << ".";
+        cout << "either option 1 or option 3, since they both result in net royalties of $" << choice1 << "." << endl;
     }
     else if (choice2 == choice3) {
-        cout << "either option 2 or option 3, since they both result in net royalties of $" << choice2 << ".";
+        cout << "either option 2 or option 3, since they both result in net royalties of $" << choice2 << "." << endl;
     }
     else {
-        cout << "whichever one you prefer, since all options result in the same net royalties of $" << choice2 << ".";
+        cout << "whichever one you prefer, since all options result in the same net royalties of $" << choice2 << "." << endl;
     }
+
+    cout << " " << endl;
+    cout << "Press any key to exit the program. ";
+    getch();
 
     return 0;
 }
