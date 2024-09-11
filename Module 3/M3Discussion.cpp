@@ -8,8 +8,8 @@ If there is no valid divisor, it outputs the number itself.
 using namespace std;
 
 int main {
-    int num ;
-    cout << "Enter an integer: " ;
+    int num;
+    cout << "Enter an integer: ";
     cin >> num;
 
     if (num % 5 == 0 && num % 3 == 0) {
