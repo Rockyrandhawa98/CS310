@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
 int main () {
@@ -23,7 +22,7 @@ int main () {
         remaining_books = books_sold - 4000;
         books_sold = 4000;
     }
-    
+
     float choice3 = (choice3_rate_first_4000 * price_per_novel * books_sold) + (choice3_rate * price_per_novel * remaining_books);
 
     cout << " " << endl;
@@ -63,8 +62,7 @@ int main () {
     }
 
     cout << " " << endl;
-    cout << "Press any key to exit the program. ";
-    getch();
+    system("pause"); // source: https://stackoverflow.com/questions/2529617/how-to-stop-c-console-application-from-exiting-immediately
 
     return 0;
 
