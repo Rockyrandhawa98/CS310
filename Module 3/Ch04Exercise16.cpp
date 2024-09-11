@@ -1,7 +1,9 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main () {
+    cout << fixed << setprecision(2);
     int books_sold;
     float price_per_novel;
     float choice2_rate = .125;
@@ -21,7 +23,7 @@ int main () {
     if (books_sold > 4000) {
         remaining_books = books_sold - 4000;
         books_sold = 4000;
-    }
+    } 
 
     float choice3 = (choice3_rate_first_4000 * price_per_novel * books_sold) + (choice3_rate * price_per_novel * remaining_books);
 
