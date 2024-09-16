@@ -10,13 +10,13 @@ int main() {
     float total = 0;
     int result = 0;
 
-    cout << "How much time does it take for you to make your first dish? ";
+    cout << "How many minutes does it take for you to make your first dish? ";
     cin >> a;
 
-    cout << "How much extra time will each subsequent dish take you to make? ";
+    cout << "How many extra minutes will each subsequent dish take you to make? ";
     cin >> b;
 
-    cout << "How much time do you have to cook? ";
+    cout << "How many minutes do you have to cook? ";
     cin >> t;
 
     while (total < t) {
@@ -27,7 +27,7 @@ int main() {
         }
     }
 
-    cout << "You can prepare a total of " << result << " dishes." << endl;
+    cout << "You can prepare a total of " << result << " dishes in " << t << " minutes." << endl;
     system("pause");
 
     return 0;
