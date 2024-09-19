@@ -9,20 +9,23 @@ int main() {
     int target = rand() % 100;
     int guess;
 
+    cout << "Guess a number, 0 through 100. Enter '-1' to quit. \n" << endl;
+
     while (guess != target) {
 
-        cout << "Guess a number, 1 through 100. Enter '-1' to quit. " << endl;
         cin >> guess;
-
         if (guess == target || -1) {
             break;
-        }
+            }
+        else if (guess < 0 || guess > 100) {
+            cout << "Your guess should be between 1 and 100. \n" << endl;
+            }
         else if (guess > target) {
-            cout << "\nThat guess is too high. Try again!" << endl;
-        }
-        else {
-            cout << "\nThat guess is too low. Try again!" << endl;
-        }
+            cout << "That guess is too high. Try again! \n" << endl;
+            }
+        else if (guess < target) {
+            cout << "That guess is too low. Try again! \n" << endl;
+            }
         }
     
     cout << endl;
