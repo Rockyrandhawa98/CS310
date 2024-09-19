@@ -27,7 +27,7 @@ int main() {
         }
     }
 
-    cout << "You can prepare a total of " << result << " dishes in " << t << " minutes." << endl;
+    cout << "Bianca can prepare a total of " << result << " dishes in " << t << " minutes." << endl;
     system("pause");
 
     return 0;
