@@ -3,26 +3,29 @@
 
 
 # Ignoring specific directories
-Module 1/CH02Exercise13.exe
 Module 1/.vscode
+Module 1/CH02Exercise13.exe
 
 Module 2/.vscode
 Module 2/M2DiscussionErrors.exe
-Module 2/Ch03Exercise7.exe
 Module 2/M2DiscussionFixes.exe
+Module 2/Ch03Exercise7.exe
 
 Module 3/.vscode
 Module 3/M3Discussion.exe
-Module 3/Ch04Exercise16.exe
 Module 3/M3DiscussionFixes.exe
+Module 3/Ch04Exercise16.exe
 
-Module 4/Ch05Exercise33.exe
-Module 4/M4Discussion.exe
 Module 4/.vscode
+Module 4/M4Discussion.exe
 Module 4/M4DiscussionFixes.exe
+Module 4/Ch05Exercise33.exe
 
 Module 5/.vscode
 Module 5/M5Discussion.exe
+Module 5/M5DiscussionFixes.exe
+Module 5/Ch06Exercise14.exe
+
 
 
 
