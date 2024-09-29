@@ -60,7 +60,7 @@ int main() {
     consultation_price = consulting_price(hourly_rate, consulting_time, low_income);
 
     cout << fixed << setprecision(2);
-    cout << "\nBased on this information, the price of your consultation will be $" << consultation_price << " " << endl;
+    cout << "\nBased on this information, the price of your consultation will be $" << consultation_price << "." << endl;
 
     system("pause");
     return 0;
