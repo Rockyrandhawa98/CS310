@@ -1,3 +1,6 @@
+//
+// Original created by Javier on 9/25/2024.
+//
 #include <iostream>
 #include <string>
 
@@ -9,7 +12,7 @@ using namespace std;
 string getName() {
     string name;
     cout << "Enter your first name: ";
-    cin >> name;
+    cin >> name;  
     return name;
 }
 
