@@ -20,7 +20,6 @@ float consulting_price (float& hourly, int& consult_time, string& income) {
             additional_time = consult_time - 30;
             result = (hourly * service_charge_percentage) * (additional_time / 60);
             return result;
-
         }
     }
     else {
@@ -34,8 +33,8 @@ float consulting_price (float& hourly, int& consult_time, string& income) {
             result = (hourly * service_charge_percentage) * (additional_time / 60);
             return result;
         }
-        }
     }
+}
 
 
 int main() {
