@@ -4,7 +4,6 @@
 using namespace std;
 
 // function to find price of consultation
-
 float consulting_price (float& hourly, int& consult_time, string& income) { 
 
     float additional_time;
