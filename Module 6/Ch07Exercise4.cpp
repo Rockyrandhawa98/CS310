@@ -31,7 +31,7 @@ int main() {
 
     string res = substr(word);
 
-    cout << "\nThe string without vowels is " << res << "." << endl;
+    cout << "\nThe string without vowels is " << "'" << res << "'." << endl;
 
     return 0;
 }
