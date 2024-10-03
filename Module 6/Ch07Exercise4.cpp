@@ -26,7 +26,7 @@ string substr (string& inputString) {
 
 int main() {
     string word;
-    cout << "\nEnter a string: ";
+    cout << "\nEnter a string without any spaces: ";
     cin >> word;
 
     string res = substr(word);
