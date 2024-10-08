@@ -33,7 +33,7 @@ int main() {
 
     cout << "Pick a column on a chessboard, from lower case 'a' to 'h': " << endl;
     cin >> input_col;
-    int reformatted_column = int(input_col) - int('a');
+    int reformatted_column = int(input_col) - int('a'); // subtracting the ASCII value of 'a' to zero-out the input
 
     cout << "\nPick a row on a chessboard - make sure this number is between 1 and 8, both inclusive: " << endl;
     cin >> input_row;
