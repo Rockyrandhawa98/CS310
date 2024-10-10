@@ -1,6 +1,9 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <vector>
+
+// Source for vector documentation: https://www.geeksforgeeks.org/vectorpush_back-vectorpop_back-c-stl/
 
 using namespace std;
 
@@ -31,19 +34,28 @@ int main() {
     }
 
 
-    // Finding the Highest Vote and the corresponding index
+    // Finding the Highest Vote and the corresponding index, Winners vector is used to keep track of ties
     float Highest_Vote = 0;
     int Highest_Vote_Index;
+    vector<string> Winners {};
 
     for (int i = 0; i < Number_of_Candidates; i++) {
         if (Votes[i] > Highest_Vote) {
+            // Clearing Winners vector of candidates with lesser votes
+            while (Winners.size() > 0) {
+                Winners.pop_back();
+            }
             Highest_Vote_Index = i;
             Highest_Vote = Votes[i];
+            Winners.push_back(Candidates[i]);
+        }
+        else if (Votes[i] == Highest_Vote) {
+            Winners.push_back(Candidates[i]);
         }
     }
 
 
-    // Winner of the election is the candidate that corresponds to the highest vote's index in the Votes array
+    // Outputting Results
     string Winner = Candidates[Highest_Vote_Index];
     float Percentage_of_Votes;
 
@@ -63,8 +75,19 @@ int main() {
     cout << setw(25) << left << "Total";
     cout << setw(25) << left << setprecision(0) << fixed << Total_Votes << endl;
     cout << " " << endl;
-    cout << "The winner of the Election is " << Winner << "." << endl;
 
+
+    // Check to see if there was a tie or not
+    if (Winners.size() == 1) {
+        cout << "The winner of the Election is " << Winner << "." << endl;
+    }
+    else {
+        cout << "There was a tie in this Election between these candidates: " << endl;
+        for (int i = 0; i < Winners.size(); i++) {
+            cout << Winners[i] << endl;
+        }
+    }
+
+    cout << " " << endl;
     return 0;
-    
 }
