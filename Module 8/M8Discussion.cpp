@@ -51,8 +51,8 @@ class Weather {
 
 
 int main() {
-    Temperature temp;
-    Weather weather;
+    Temperature temp1;
+    Weather weather1;
 
     int todaysTemperature;
     string todaysWeather;
@@ -63,11 +63,11 @@ int main() {
     cout << "What's the weather like?" << endl;
     cin >> todaysWeather;
 
-    temp.setTemperature(todaysTemperature);
-    weather.setWeather(todaysWeather);
+    temp1.setTemperature(todaysTemperature);
+    weather1.setWeather(todaysWeather);
 
-    cout << "The temperature today is " << temp.getTemperature() << " degrees and it is " \
-    << weather.getWeather().append(".") << endl;
+    cout << "The temperature today is " << temp1.getTemperature() << " degrees and it is " \
+    << weather1.getWeather().append(".") << endl;
     
     return 0;
 }
