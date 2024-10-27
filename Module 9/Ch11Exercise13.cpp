@@ -138,7 +138,6 @@ class CheckingAccount : public BankAccount {
             this->setInterestRate(interestRate);
             this->minimumBalance = minimumBalance;
             this->serviceCharge = serviceCharge;
-            
         }
 
 };
