@@ -2,6 +2,7 @@
 #include <exception>
 #include <set>
 
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -19,7 +20,6 @@ class negativeNumber : public exception {
 
 };
 
-
 class nonNumber : public exception {
     public:
     const char * what() const noexcept {
@@ -29,25 +29,18 @@ class nonNumber : public exception {
 };
 
 
-double toCentimeter(double feet, double inches);
 double validateNumber(string number);
+double toCentimeter(double feet, double inches);
+void print(double feet, double inches, double centimeters);
 
 
 int main() {
-
     double feet = validateNumber("feet");
     double inches = validateNumber("inches");
-
     double centimeters = toCentimeter(feet, inches);
-
-    cout << feet << " feet and " << inches << " inches converts into " << centimeters << " centimeters." << endl;
+    print(feet, inches, centimeters);
 
     return 0;
-}
-
-
-double toCentimeter(double feet, double inches) {
-    return ((feet * 12) + inches) * 2.54;
 }
 
 
@@ -69,7 +62,8 @@ double validateNumber(string number) {
             // source for conversion: https://stackoverflow.com/questions/4754011/how-to-convert-a-stdstring-to-double
             double val = stod(num);
             
-            if (val < 0) {
+            // random edge case I found where -0 wouldn't count as a negative number
+            if (val < 0 || val == -0) {
                 throw negativeNumber();
             }
 
@@ -82,4 +76,12 @@ double validateNumber(string number) {
             cout << e.what() << endl;
         }
     }
+}
+
+double toCentimeter(double feet, double inches) {
+    return ((feet * 12) + inches) * 2.54;
+}
+
+void print(double feet, double inches, double centimeters) {
+    cout << feet << " feet and " << inches << " inches converts into " << centimeters << " centimeters." << endl;
 }
